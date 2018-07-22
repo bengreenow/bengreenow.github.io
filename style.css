@@ -1,0 +1,17 @@
+.parallax-window {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    background: transparent;
+    padding: 0px;
+}
+.hello{
+    align-self: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40pt;
+}
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
