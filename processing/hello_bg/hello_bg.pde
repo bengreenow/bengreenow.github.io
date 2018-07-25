@@ -3,7 +3,7 @@ int amt = 200;
 ArrayList<Ball> balls = new ArrayList<Ball>();
 
 void setup(){
-  size(1000,500);
+  size(1000,500); 
   //b = new Ball();
     for (int i = 0; i < amt; i++){
     balls.add(new Ball());
