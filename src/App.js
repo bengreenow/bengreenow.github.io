@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import { Card, Container, Jumbotron } from "react-bootstrap";
+
+export default function App() {
+    return (
+        <Container fluid="lg">
+            <Jumbotron>
+                <h3 className="display-4">Hi, I'm Ben Greenow.</h3>
+                <p>I'm a front end developer who likes to design things.</p>
+            </Jumbotron>
+        </Container>
+    );
 }
-
-export default App;
