@@ -1,31 +1,43 @@
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
             rel="stylesheet"
         />
+        <link href="./styles.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     </head>
     <body>
-        <div id="app">{{message}}</div>
-        <div id="hello_text">
-            ben greenow<br /><br />
-            <a href="https://soundcloud.com/bengreenow">soundcloud</a><br />
-            <a
-                href="https://www.youtube.com/channel/UCP74eTmr38Y8rquG5PFTfYw?view_as=subscriber"
-                >youtube</a
-            ><br />
-            <a
-                href="https://open.spotify.com/artist/2LFPfAOn8z2I6ulasSNPOj?si=C9K7uNazRXq-y-WWui-Khw"
-                >spotify</a
-            >
-        </div>
+        <header>
+            Ben Greenow is <span id="descriptions">{{message}}</span>.
+        </header>
+        <div>You can contact me here:</div>
     </body>
     <script>
+        var descArray = [
+            "an awesome guy",
+            "a react developer",
+            "a smelly man",
+            "cool",
+            "a wannabe hipster",
+            "a HTML guru",
+            "a CSS wizard",
+            "a git guardian",
+            "a drummer",
+        ];
+        var arrayIndex = 0;
         var app = new Vue({
-            el: "#app",
+            el: "#descriptions",
             data: {
-                message: "Hello World!",
+                message: descArray[arrayIndex],
+            },
+            created: function () {
+                var self = this;
+                var interval = setInterval(function () {
+                    arrayIndex++;
+                    self.message = descArray[arrayIndex % descArray.length];
+                }, 2000);
             },
         });
     </script>
